@@ -1,5 +1,6 @@
 print("==welcome==")
 def calculate(*args,**kwargs):
+    """This act as fuction decalartion of rthe argument will be used by using arsterics """
     for x in args:
         if not isinstance(x,(int,float)):
             raise ValueError("Invalid input")
@@ -12,6 +13,7 @@ def calculate(*args,**kwargs):
     Operation=get_operation[0]
     return process(Operation, *args)
 def process(Operation, *args):
+      """This help to determine the fuction of each opereation  by calculation and how fuction return"""
       if Operation=="Add":
             return sum(args)
       if Operation=="Multiply":
@@ -21,6 +23,7 @@ def process(Operation, *args):
          return result
     
 def main():
+    """This help us to make  fuction calling"""
     try:
         print("Choose Operation:\n1.Add\n2.Multiply")
         choice=input("Enter your choice : ").strip()
